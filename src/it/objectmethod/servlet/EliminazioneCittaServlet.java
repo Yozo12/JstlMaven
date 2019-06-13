@@ -5,23 +5,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.objectmethod.dao.CittaDaoImp;
-import it.objectmethod.dao.EliminazioneDao;
-import it.objectmethod.dao.NazioniDaoImp;
-
 
 public class EliminazioneCittaServlet extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse respons) {
+		String setLinkCitta = request.getParameter("code");
 
-	protected void doGet (HttpServletRequest request, HttpServletResponse respons) {
-   String SetLinkDelete = request.getParameter("ID");
-   try {
 		
-		EliminazioneDao daoEli = new EliminazioneDao();
 		
-		request.setAttribute("citta",daoEli.deleteElemento(SetLinkDelete));
-		request.getRequestDispatcher("ListNazioni.jsp").forward(request, respons);
-		//ciao
+		try {
+			CittaDaoImp daoEli = new CittaDaoImp();
+			request.setAttribute("citta",daoEli.eliminazioneCitta(setLinkCitta));
+			request.getRequestDispatcher("/ListCittaServlet" ).forward(request, respons);
+
+		}
+		catch(Exception e) {
+
+			e.printStackTrace();
+		}
 	}
-		
-}
 
 }

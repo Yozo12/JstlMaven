@@ -7,6 +7,8 @@ import it.objectmethod.model.CityModel;
 public interface CittaDaoI {
 	
 	public List<CityModel> getCitta(String x);
+	public List<CityModel> getCittaDue(String x);
 	public void setCitta(String citta);
-	public String getCitta();
+	public String eliminazioneCitta(String x);
+
 }

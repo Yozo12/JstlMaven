@@ -29,10 +29,28 @@
 		<servlet-name>ListNazioni</servlet-name>
 		<servlet-class>it.objectmethod.servlet.ListNazioniServlet</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>ListNazioni</servlet-name>
 		<url-pattern>/ListNazioni</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>Eliminare</servlet-name>
+		<servlet-class>it.objectmethod.servlet.EliminazioneCittaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Eliminare</servlet-name>
+		<url-pattern>/Eliminare</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ListCittaDue</servlet-name>
+		<servlet-class>it.objectmethod.servlet.ListCittaServletDue</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListCittaDue</servlet-name>
+		<url-pattern>/ListCittaDue</url-pattern>
+	</servlet-mapping>
+
+	
 </web-app>

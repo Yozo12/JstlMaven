@@ -17,7 +17,7 @@
 		
 			<thead>
 				<tr>
-					<th>name</th>
+					<th>città</th>
 				</tr>
 			</thead>
 			
@@ -26,10 +26,13 @@
 				<c:forEach items="${citta}" var="c" >
 				
 				<tr>
-					<td><a href="EliminazioneCitta?citta=${c.id}">elimina</a>   ${c.citta}</td>
+					<td><a href="Eliminare?code=${c.id}">elimina</a>${c.id}</td>
 					<td>${c.popolazione}</td>
+					<td>${c.citta}</td>
+					
+					<td><a href="ListContinent">torna alla pagine dei continenti</a></td>
 				</tr> 
-
+                       
 				</c:forEach>
 				
 			</tbody>
